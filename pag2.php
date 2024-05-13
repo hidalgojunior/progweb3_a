@@ -27,7 +27,7 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
-                                    <a class="nav-link " aria-current="page" href="#">Home</a>
+                                    <a class="nav-link " aria-current="page" href="index.php">Home</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">DashBoard</a>
@@ -38,7 +38,7 @@
                                         Usuarios
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Cadastrar</a></li>
+                                        <li><a class="dropdown-item" href="pag2.php">Cadastrar</a></li>
                                         <li><a class="dropdown-item" href="#">Listar</a></li>
                                         <li>
                                             <hr class="dropdown-divider">
@@ -66,8 +66,8 @@
                 <h1 class="display-4">Cadastro de Usuários</h1>
             </div>
         </div>
-        <form method="post" class="form-control">
-        <div class="row">
+        <form method="post" class="form-control" action="proc_user.php">
+        <div class="row mb-2">
             <div class="col-sm-12 col-md-6 col-lg-2">
               <label for="nome">Nome Completo</label>
             </div>
@@ -75,7 +75,7 @@
               <input type="text" name="nome" id="nome" class="form-control">
             </div>
         </div>
-        <div class="row">
+        <div class="row mb-2">
         <div class="col-sm-12 col-md-6 col-lg-2">
           <label for="login">Login</label>
         </div>
@@ -88,29 +88,45 @@
             <div class="col-sm-12 col-md-6 col-lg-4">
               <select name="nivel" id="nivel" class="form-control">
                 <option disabled selected>Clique e escolha uma opção abaixo</option>
-                <option value="0">Administrador</option>
-                <option value="1">Secretaria</option>
-                <option value="2">Consultas</option>
+                <option value="1">Administrador</option>
+                <option value="2">Secretaria</option>
+                <option value="3">Consultas</option>
               </select>
 
             </div>
         </div>
-        <div class="row">
+        <div class="row mb-2">
         <div class="col-sm-12 col-md-6 col-lg-2">
               <label for="senha1">Digite a senha</label>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-4">
               <input type="password" name="senha1" id="senha1" class="form-control">
             </div>
-            <div class="col-sm-12 col-md-6 col-lg-2">
+            <!-- <div class="col-sm-12 col-md-6 col-lg-2">
               <label for="senha2">Redigite a senha</label>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-4">
               <input type="password" name="senha2" id="senha2" class="form-control">
+            </div> -->
+        </div> 
+        <div class="row mt-3 mb-2">
+            <div class="col-6">
+                <button class="btn btn-large btn-outline-success form-control"  name="cadastrar">
+                    Cadastrar
+                </button>
+            </div>
+            <div class="col-6">
+                <button class="btn btn-large btn-outline-danger form-control" >
+                    Limpar
+                </button>
             </div>
         </div>
         </form>
-
+        <div class="row">
+            <div class="col-12">
+                <h2>git clone https://github.com/hidalgojunior/progweb3_a</h2>
+            </div>
+        </div>
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
